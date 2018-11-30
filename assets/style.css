@@ -1,0 +1,118 @@
+body{
+	font-family:Ubuntu;
+	padding-top:5px;
+	font-color:#464646;
+}
+
+/*<!------------  headre  ----------->*/
+#header{
+	
+	background-color:#2e2e2e;
+	border-radius:3px;
+	padding:20px;
+	margin-top:10px;
+	margin-bottom:5px;
+
+}
+
+
+/*<!------------  Footer  ----------->*/
+#footer{
+	padding:5px;
+	background:#464646;
+}
+
+#footer a:hover{
+	color:#00c5fe;
+	text-decoration:none;
+}
+#footer a{
+	color:#fff;
+}
+
+
+/*custom navbar*/
+.navbar-custom {
+	background:#464646;
+	color:#fff;
+	border-radius:0px;
+}
+.navbar-custom .navbar-nav >li >  a{
+	color:#fff;
+}
+.navbar-custom .navbar-nav > .active > a{
+	color:#fff;
+	background:transparent;
+}
+.navbar-custom .navbar-nav >li >a:hover,
+.navbar-custom .navbar-nav >li >a:focus,
+.navbar-custom .navbar-nav >.active >a:hover,
+.navbar-custom .navbar-nav >.active >a:focus,
+.navbar-custom .navbar-nav >.open >a{
+	text-decoration:none;
+	background-color:#3498db;
+}
+.navbar-custom .navbar-brand{
+	color:#eeeeee;
+}
+.navbar-custom .navbar-toggle{
+	background-color:#eeeeee;
+}
+.navbar-custom .icon-bar{
+	background-color:#3498db;
+}
+
+
+/*<!------------  panel  ----------->*/
+.panel{
+	border-radius:0px;
+}
+.panel-heading{
+	border-radius:0px;
+}
+
+
+.panel-custom {
+	border-radius:0px;
+	border:1px solid #464646;
+}
+.panel-custom .panel-heading{
+	background-color:#464646;
+	color:#00c5fe;
+	text-decoration:bold;
+}
+
+
+/*<------------- Btn Custom ------------->*/
+.btn-custom{
+	background-color:#464646;
+	color:#00c5fe;
+}
+.btn-custom:hover{
+	color:#ebebeb;
+	background-color:#00c5fe;
+}
+
+.kotak {
+	margin-left:40px;
+	margin-bottom:20px;
+	width:600px;
+	padding:25px;	
+	background: #fff;
+	border:1px solid #c5c5c5;
+	border-radius:5px;
+}
+#thubnail a{
+	text-decoration:none;
+	font-weight:bold;
+	color:#000;
+	margin:5px;
+	background-color:#00BFFF;
+	border:1px solid black;
+	padding:3px;
+}
+#thubnail{
+	font-size:15px;
+	font-family:calibri;
+	padding:10px 0;
+
