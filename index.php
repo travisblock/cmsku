@@ -63,14 +63,6 @@ include "inc/config.php";
               <li><a href="./?hal=profile">Profile</a></li>
               <li><a href="./?hal=berita">Berita</a></li>
               <li><a href="#">Tutorial</a></li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Layanan <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="./?hal=layanan-pembuatan-web">Pembuatan Web</a></li>
-                  <li><a href="#">Pembuatan program</a></li>
-                  <li><a href="#">Pembuatan Facebook</a></li>
-                </ul>
-              </li>
             </ul>
 	            
           </div><!--/.nav-collapse -->
@@ -83,8 +75,8 @@ include "inc/config.php";
       <?php
       if (isset($_GET['hal'])){
       	if($_GET['hal']=='profile'){
-	      	$sqlhal = mysql_query("select * from halaman where id='2'");
-	      	$hal = mysql_fetch_array($sqlhal);
+	      	$sqlhal = mysqli_query($con, "select * from halaman where id='2'");
+	      	$hal = mysqli_fetch_array($sqlhal);
 	      	?>
 	      <div class="panel panel-custom">
 	      <div class="panel panel-heading">
@@ -98,8 +90,8 @@ include "inc/config.php";
 
 
       	}elseif($_GET['hal']=='layanan-pembuatan-web'){
-      		$sqlhal = mysql_query("select * from halaman where id='3'");
-	      	$hal = mysql_fetch_array($sqlhal);
+      		$sqlhal = mysqli_query($con, "select * from halaman where id='3'");
+	      	$hal = mysqli_fetch_array($sqlhal);
 	      	?>
 	      <div class="panel panel-custom">
 	      <div class="panel panel-heading">
@@ -116,8 +108,8 @@ include "inc/config.php";
       	}
 
       }else{
-      	$sqlhal = mysql_query("select * from halaman where id='1'");
-      	$hal = mysql_fetch_array($sqlhal);
+      	$sqlhal = mysqli_query($con, "select * from halaman where id='1'");
+      	$hal = mysqli_fetch_array($sqlhal);
       	?>
 
       <div class="panel panel-custom">
@@ -144,8 +136,8 @@ include "inc/config.php";
       </div>
       <div class="panel-kategori-custom">
 		    <?php 
-		    $sqlktg = mysql_query("select * from kategori");
-		    while($k=mysql_fetch_array($sqlktg)){
+		    $sqlktg = mysqli_query($con, "select * from kategori");
+		    while($k=mysqli_fetch_array($sqlktg)){
 		    ?>
 				    	<a class="panel-kategori-custom" href="./?hal=berita&ktg=<?php echo $k['id']; ?>">
 				      	<?php echo $k['nm_kategori']; ?></a><br>
@@ -157,7 +149,7 @@ include "inc/config.php";
   </div>
 </div>
     <div id="footer">
-      <center><a href="www.indexattacker.tech">Copyright &copy; 2018 Ajid -CMS</a></center>
+      <center><a href="http://www.sql47.github.io">&copy; 2019 MyCMS</a></center>
       </div>
     </div> <!-- /container -->
 
