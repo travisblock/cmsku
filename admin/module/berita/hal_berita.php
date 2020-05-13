@@ -1,20 +1,9 @@
 
 <?php
-function quote($value){
-	if(get_magic_quotes_gpc()){
-		$value = stripslashes($value);
-	}
-	if(!is_numeric($value)){
-		$value = "".mysql_real_escape_string($value)."";
-	}
-	return $value;
-}
 
 if(isset($_GET['id'])){
-
-	//tampilkan detail berita
-	$sqlbrt = mysql_query("select berita.*, kategori.nm_kategori, user.nama_lengkap from berita inner join kategori on berita.id_kategori = kategori.id inner join user on berita.id_user = user.id where berita.id='$_GET[id]'");
-    $brt = mysql_fetch_array($sqlbrt);
+	$sqlbrt = mysqli_query($con, "select berita.*, kategori.nm_kategori, user.nama_lengkap from berita inner join kategori on berita.id_kategori = kategori.id inner join user on berita.id_user = user.id where berita.id='$_GET[id]'");
+    $brt = mysqli_fetch_array($sqlbrt);
       	?>
 
     <div class="panel panel-custom">
@@ -39,8 +28,8 @@ if(isset($_GET['id'])){
       	<div class="panel panel-body">
       	<ul class="media-list">
       	<?php
-      	 $sqlkomen = mysql_query("select * from komentar where id_berita='$brt[id]' order by id DESC");
-		    while($k=mysql_fetch_array($sqlkomen)){
+      	 $sqlkomen = mysqli_query($con, "select * from komentar where id_berita='$brt[id]' order by id DESC");
+		    while($k=mysqli_fetch_array($sqlkomen)){
       	?>
       		<li class="media" style="border-bottom:1px solid #ebebeb;">
       		<div class="media-body">
@@ -90,8 +79,8 @@ if(isset($_GET['id'])){
 }elseif(isset($_GET['ktg'])){
 
 	//tampilkan berita berdasarkan kategori
-	$sqlktg = mysql_query("select * from kategori where id='$_GET[ktg]'");
-	$ktg = mysql_fetch_array($sqlktg);
+	$sqlktg = mysqli_query($con, "select * from kategori where id='$_GET[ktg]'");
+	$ktg = mysqli_fetch_array($sqlktg);
 ?>
 	<div class="panel panel-custom">
 	    <div class="panel panel-heading">
@@ -100,8 +89,8 @@ if(isset($_GET['id'])){
 
 	    <div class="panel-body">	      
 	      	<ul><?php
-			      $sqlbrt = mysql_query("select * from berita where id_kategori='$_GET[ktg]' order by id DESC");
-			      while($brt = mysql_fetch_array($sqlbrt)){
+			      $sqlbrt = mysqli_query($con, "select * from berita where id_kategori='$_GET[ktg]' order by id DESC");
+			      while($brt = mysqli_fetch_array($sqlbrt)){
 			      echo "
 			      <li>
 			      		<a href='./?hal=berita&id=$brt[id]'>$brt[judul]</a>
@@ -124,8 +113,8 @@ if(isset($_GET['id'])){
 
 	    <div class="panel-body">	      
 	      	<ul><?php
-			      $sqlbrt = mysql_query("select * from berita order by id DESC");
-			      while($brt = mysql_fetch_array($sqlbrt)){
+			      $sqlbrt = mysqli_query($con, "select * from berita order by id DESC");
+			      while($brt = mysqli_fetch_array($sqlbrt)){
 			      	echo "<li>
 			      	<a href='./?hal=berita&id=$brt[id]'>$brt[judul]</a>
 

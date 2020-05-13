@@ -1,6 +1,3 @@
-<html><head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-</head></html>
 <?php
 if(isset($_GET['m'])){
 	if($_GET['m']=='kategori'){
@@ -15,31 +12,15 @@ if(isset($_GET['m'])){
 	}elseif($_GET['m']=='halaman'){
 		include "module/halaman/halaman.php";
 
+	}elseif($_GET['m']=='user'){
+		include "module/user/user.php";
+
 	}else{
-		echo "<h3>Module Not Found</h3><p>Pilih Yang Lain Goblokk!</p>";
+		echo "<h3>Module Not Found</h3>";
 	}
 }else{
-	echo"<html>
-	<head>
-	<style>
-	body{
-		
-		background-image:url('../images/wp.jpg');
-		background-size:cover;
-		background-repeat:no-repeat;
-		background-attachment:fixed;
-	}
-	h4{
-		color:gold;
-		font-size:30px;
-		padding:0px;
-		margin-top:-10px
-	}
-	</style>
-	</head>
-	<h4><font color='#00c5fe'>[</font>Selamat Datang $_SESSION[nama]</font><font color='#00c5fe'>]</font></h4>
-	</html>
-		";
+	echo"
+	<h2>-- Selamat Datang $_SESSION[nama] --</h2>";
 }
 
 ?>
