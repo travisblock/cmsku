@@ -1,11 +1,10 @@
 <?php
 //variabel
-$host		= "sql205.unaux.com";
-$user		= "unaux_22367612";
-$password 	= "tnhn6cikzw";
-$db_name 	= "unaux_22367612_db_cms";
+$host		= "localhost";
+$user		= "root";
+$password 	= "root";
+$db_name 	= "db_mycms";
 
-mysql_connect($host, $user, $password) or die ("Koneksi Gagal");
-
-mysql_select_db($db_name) or die ("Databas Not Fond");
+$con 		= mysqli_connect($host, $user, $password, $db_name);
+if(!$con) die(mysqli_connect_error());
 ?>
