@@ -3,6 +3,156 @@ body{
 	padding-top:5px;
 	font-color:#464646;
 }
+/* ADMIN PAGE */
+.content th{
+	background:#0078FF;
+	color:#fff;
+	border:1px solid #464646;
+
+}
+.content a{
+	text-decoration:none;
+	color:#0078FF;
+	font-weight:bold;
+}
+.content a:hover{
+	color:orange;
+}
+.header{
+	
+	background-color:#2e2e2e;
+	border-radius:3px;
+	padding:20px;
+	margin-top:10px;
+	margin-bottom:5px;
+
+}
+.header h1{
+	color:#dadada;
+}
+.content{
+	margin-top:5px;
+	padding:10px;
+	
+}
+.content h3{
+	padding-bottom:5px;
+	display:block;
+	font-family:calibri;
+	margin-top:0px;
+	border-bottom:3px solid #000;
+	margin-bottom:8px;
+	
+}
+.content h2{
+	text-align: center;
+}
+.content form{
+	border:1px solid #ebebeb;
+	line-height:200%;
+	padding:5px;
+}
+.content tr:hover{
+	background:#939393;
+}
+.content ul li{
+	list-style:none;
+}
+.judul{
+	width: 500px; border:none; border-bottom:2px solid #464646; padding:5px;
+}
+/*END ADMIN PAGE */
+
+/* LOGIN ADMIN */
+
+
+.bodylogin
+{
+	
+	background:#201f26;
+	font-family: Ubuntu;
+} 
+
+.loginbox
+{
+position: absolute;
+top: 50%;
+left: 50%; 
+transform: translate(-50%, -50%);
+width: 360px;
+height: 420px;
+padding: 40px 40px;
+box-sizing: border-box;
+background:rgba(0, 5, 5, .5);
+}
+
+
+.user
+{
+width: 100px;
+height:100px;
+position: absolute;
+margin-top:-100px;
+margin-left:90px;
+
+}
+
+.loginbox h2
+{
+padding: 0 0 30px;
+color: #efed40;
+text-align: center;
+}
+
+.loginbox input
+{
+width: 100%;
+margin-bottom: 20px;
+}
+
+.loginbox form
+{
+color: black;
+}
+
+.loginbox input[type="text"],
+.loginbox input[type="password"]
+{
+border: none;
+border-bottom: 2px solid gold;
+background: transparent;
+color:white;
+}
+.loginbox input[type="submit"]
+{
+
+border: none;
+outline: none;
+height: 30px;
+width: 200px;
+color: black;
+font-size: 16px;
+background: #efed40;
+cursor: pointer;
+border-radius: 100px;
+margin-left: 30px;
+}
+.loginbox input[type="submit"]:hover
+{
+background: yellow;
+color: black;
+}
+.loginbox a
+{
+color:gold;
+text-decoration: none;
+}
+.textx{
+color:white;
+font-size:15px;
+}
+
+/* END LOGIN ADMIN */
 
 /*<!------------  headre  ----------->*/
 #header{
